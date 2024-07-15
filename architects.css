@@ -10,6 +10,9 @@
 .display-flex{
     display: flex;
 }
+main > section{
+    margin-top: 130px;
+}
 /* dark 2 */
 .text-gray{
     color: #424242;
@@ -20,6 +23,10 @@
 }
 .bg-light{
     background-color: rgba(255, 147, 23, 0.1);
+}
+
+.text-primary{
+    color: #FF900E;
 }
 
 /* header style */
@@ -55,7 +62,7 @@
         font-size: 4rem;
         font-weight: 700;
     }
-
+}
     /* Btn-primary */
     .btn-primary{background-color: #FF900E;color: white;
         padding: 20px 25px;
@@ -63,13 +70,94 @@
         font-weight: 600;
         border-radius: 8px;
         border: none; }
-}
+
 .banner-img{
     width: 100%;
 }
 
+/* feature reatalted styles */
+.team{
+    align-items: center;
+}
+.team-img{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.our-features{
+    margin-left: 130px;
+    max-width: 530px;   
+}
+.section-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+#quick-list{
+    font-size: 500;
+}
+
+
+/* some fact related styles */
+
+.fact-container{
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+}
+
+.fact{
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    text-align: center;
+    justify-content: center;
+}
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.fact-discription{
+    max-width: 540px;
+}
+/* sponsor */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsors-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sponsors-companies img{
+    filter: grayscale(100%);
+}
 /* responsive media quary */
 
 @media screen and (max-width:576px) {
-.navbar,.nav-link{flex-direction: column;}
+.navbar,
+.nav-link,
+.team{flex-direction: column;}
+.team-img, 
+.fact-container, 
+.sponsors-companies{
+    grid-template-columns: repeat(1, 1fr);
+}
+.our-features{
+    margin-left: 20px;
+}
+.fact-container{justify-items: center;
+    gap: 24px;}
+.sponsors-companies{
+    justify-items: center;
+gap: 50px;}
+
 }
